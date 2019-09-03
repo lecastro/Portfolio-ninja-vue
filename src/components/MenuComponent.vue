@@ -44,7 +44,7 @@ export default {
   border-radius: 1px;
   height: 2px;
   width: 25px;
-  background: #fff;
+  background: #bbbbbb;
   position: absolute;
   left: 0;
   top: 50%;
@@ -71,6 +71,7 @@ export default {
   transform: translate(-50%, -50%) rotate(40deg);
   width: 100%;
   z-index: 0;
+
 }
 
 .nav-menu--open {

@@ -1,81 +1,81 @@
 const skills = [
   {
-    name: 'LARAVEL',
+    name: 'Laravel',
     level: '75%',
     className: 'laravel'
   },
   {
-    name: 'JAVASCRIPT',
+    name: 'JavaScript',
     level: '70%',
     className: 'javascript'
   },
   {
-    name: 'MYSQL',
+    name: 'Mysql',
     level: '80%',
     className: 'mysql'
   },
   {
-    name: 'VUEJS',
+    name: 'VueJs',
     level: '55%',
     className: 'vuejs'
   },
   {
-    name: 'HTML5',
+    name: 'Html5',
     level: '90%',
     className: 'html'
   },
   {
-    name: 'CSS3',
+    name: 'Css3',
     level: '50%',
     className: 'css'
   },
   {
-    name: 'HARDWARE',
+    name: 'HardWare',
     level: '60%',
     className: 'hardware'
   },
   {
-    name: 'ARQUITETURA MVC',
+    name: 'Mvc',
     level: '65%',
     className: 'mvc'
   },
   {
-    name: 'API REST FULL',
+    name: 'Api rest full',
     level: '77%',
     className: 'api'
   },
   {
-    name: 'REACT',
+    name: 'React',
     level: '40%',
     className: 'react'
   },
   {
-    name: 'MONGODB',
+    name: 'Mongo',
     level: '50%',
     className: 'mongo'
   },
   {
-    name: 'LINUX',
+    name: 'Linux',
     level: '65%',
     className: 'linux'
   },
   {
-    name: 'DOCKER',
+    name: 'Docker',
     level: '50%',
     className: 'docker'
   },
   {
-    name: 'EXPRESS',
+    name: 'Express',
     level: '60%',
     className: 'express'
   },
   {
-    name: 'Autenticação API JWT',
+    name: 'Autenticação JWT',
     level: '60%',
     className: 'jwt'
   },
   {
-    name: ' CONCEITOS SOLID',
+    name: ' Conceitos Solid',
     level: '60%',
     className: 'solid'
   }

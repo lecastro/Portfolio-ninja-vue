@@ -1,6 +1,6 @@
 <template>
   <div id="center">
-    <h1>My Skill</h1>
+    <h5>My Skill</h5>
     <div class="box-skills" v-for="(skill, index) in pageOfItems" :key="index">
       <p>{{ skill.name }}</p>
       <p>{{ skill.level }}</p>
@@ -8,37 +8,51 @@
         <div v-bind:class="skill.className"></div>
       </div>
     </div>
-    <jw-pagination :items="skills" :pageSize='5' @changePage="onChangePage" :labels="customLabels"></jw-pagination>
+    <jw-pagination :items="skills" :pageSize='4'
+    @changePage="onChangePage" :labels="customLabels" :styles="customStyles"></jw-pagination>
   </div>
 </template>
 
 <script>
-  import skills from '../Utils/Skills';
-  import JwPagination from 'jw-vue-pagination';
+import skills from '../Utils/Skills';
+import JwPagination from 'jw-vue-pagination';
 
-  const customLabels = {
-    first: 'inicio',
-    last: 'última',
-    previous: 'Voltar',
-    next: 'Proxímo'
-  };
-  export default {
-    data() {
-      return {
-        customLabels,
-        skills,
-        pageOfItems: [],
-      }
-    },
-    methods: {
-        onChangePage(pageOfItems) {
-            this.pageOfItems = pageOfItems;
-        }
-    },
-    components:{
-      'jw-pagination':JwPagination
-    },
+const customLabels = {
+  first: 'inicio',
+  last: 'última',
+  previous: 'Voltar',
+  next: 'Proxímo'
+};
+
+const customStyles = {
+  li: {
+      display: 'inline-block',
+      borderRadius: '4px'
+  },
+  a: {
+      color: 'blue',
+      fontSize: '13px'
   }
+};
+
+export default {
+  data() {
+    return {
+      customStyles,
+      customLabels,
+      skills,
+      pageOfItems: [],
+    }
+  },
+  methods: {
+      onChangePage(pageOfItems) {
+          this.pageOfItems = pageOfItems;
+      }
+  },
+  components:{
+    'jw-pagination':JwPagination
+  },
+}
 </script>
 
 <style scoped>
@@ -48,7 +62,7 @@
   }
 
   #center {
-    width: 40%;
+    width: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -60,7 +74,7 @@
     border-radius: 5px;
   }
 
-  #center h1 {
+  #center h5 {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -75,7 +89,7 @@
 
   #center .box-skills p {
     color: #fff;
-    text-transform: uppercase;
+    font-size: 15px;
     margin: 0 0 10px;
     padding: 0;
   }
