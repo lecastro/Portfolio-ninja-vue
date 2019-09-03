@@ -18,7 +18,7 @@ export default {
     return {
       avatar,
       message: 'Hello World!',
-      name: 'Lucas Castro | Junior Software Developer | AllEasy'
+      name: 'Lucas Castro | Junior Software Developer'
     };
   },
   components: {
