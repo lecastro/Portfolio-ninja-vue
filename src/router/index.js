@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import HomeComponent from '@/pages/HomeComponent';
-import ProjectComponent from '@/pages/ProjectComponent.vue';
-import SkillsComponent from '@/pages/SkillsComponent.vue';
-import ContactsComponent from '@/pages/ContactsComponent';
-import AboutComponent from '@/pages/AboutComponent.vue';
+import Home from '@/pages/HomePages';
+import Project from '@/pages/ProjectPages.vue';
+import Skills from '@/pages/SkillsPages.vue';
+import Contacts from '@/pages/ContactsPages.vue';
+import About from '@/pages/AboutPages.vue';
 
 Vue.use(Router)
 
@@ -13,27 +13,27 @@ export default new Router({
   routes: [{
       path: '/',
       name: 'home',
-      component: HomeComponent
+      component: Home
     },
     {
       path: '/skills',
       name: 'skills',
-      component: SkillsComponent
+      component: Skills
     },
     {
       path: '/project',
       name: 'project',
-      component: ProjectComponent
+      component: Project
     },
     {
       path: '/contacts',
       name: 'contacts',
-      component: ContactsComponent
+      component: Contacts
     },
     {
       path: '/about',
       name: 'about',
-      component: AboutComponent
+      component: About
     },
   ]
 })
