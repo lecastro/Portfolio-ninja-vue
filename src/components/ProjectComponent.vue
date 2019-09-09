@@ -1,45 +1,33 @@
 <template>
-<div class='main-container'>
-    <ul>
-        <li>
-          <img :src='github' :alt='github' />
-            <footer>
-                <strong>{user.name}</strong>
-                <p>{user.bio}</p>
-            </footer>
-        </li>
-    </ul>
-
-    <ul>
-        <li>
-          <img :src='github' :alt='github' />
-            <footer>
-                <strong>{user.name}</strong>
-                <p>{user.bio}</p>
-            </footer>
-        </li>
-    </ul>
-
-
-    <ul>
-        <li>
-          <img :src='github' :alt='github' />
-            <footer>
-                <strong>{user.name}</strong>
-                <p>{user.bio}</p>
-            </footer>
-        </li>
-    </ul>
-
+<div class="cards">
+    <div class="card-item" v-for="(item, index) in repository" :key="index">
+      <img class="article-img" :src='github' :alt='github' />
+      <footer>
+        <strong>{{ item.name }}</strong>
+      </footer>
+    </div>
 </div>
 </template>
 
 <script>
 import github from '../assets/github.gif'
 export default {
+  created() {
+    this.loadRepository();
+  },
   data() {
     return {
       github
+    }
+  },
+  methods: {
+    loadRepository(){
+      this.$store.dispatch("loadRepository");
+    }
+  },
+  computed: {
+    repository(){
+      return this.$store.state.Repository.items;
     }
   },
 }
@@ -47,33 +35,33 @@ export default {
 
 <style scoped>
 
-.main-container{
-  max-width: 80px;
-  margin: 0 auto;
-  padding: 25px;
-}
-.main-container ul {
-  list-style: none;
-}
-.main-container ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-
-}
-.main-container ul li {
-    flex-direction: column;
-}
-.main-container ul li img{
+img {
   max-width: 100%;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 5px 5px;
+  height: 75px;
+  width: 75px;
 }
-.main-container ul li footer{
-  flex: 1;
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 15px 20px;
-  text-align: left;
-  border-radius: 0 0 5px 5px;
+
+.cards{
+  padding-top: 3%;
+  padding-left: 11%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  align-items: center;
+  grid-gap: 10px;
 }
+
+.card-item footer {
+  font-size: 13px;
+  color: #fff;
+}
+
+
+@media (max-width: 500px) {
+  .cards{
+    padding-left: 40%;
+    padding-top: 10%;
+  }
+}
+
 </style>
