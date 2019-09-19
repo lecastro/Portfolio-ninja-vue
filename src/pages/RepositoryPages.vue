@@ -4,11 +4,11 @@
 
 <script>
 
-import ProjectComponent from '../components/ProjectComponent';
+import RepositoryComponent from '../components/RepositoryComponent.vue';
 
 export default {
   components:{
-    project: ProjectComponent,
+    project: RepositoryComponent,
   }
 }
 </script>
