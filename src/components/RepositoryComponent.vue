@@ -1,11 +1,11 @@
 <template>
-<div class="cards">
-    <div class="card-item" v-for="(item, index) in repository" :key="index">
-      <img class="article-img" :src='github' :alt='github' />
-      <footer>
+<div id="cards-grid">
+  <section>
+      <div class="card-item" v-for="(item, index) in repository" :key="index">
+        <img class="article-img" :src='github' :alt='github' />
         <strong>{{ item.name }}</strong>
-      </footer>
-    </div>
+      </div>
+  </section>
 </div>
 </template>
 
@@ -37,30 +37,41 @@ export default {
 
 img {
   max-width: 100%;
-  border-radius: 5px 5px 5px 5px;
-  height: 75px;
-  width: 75px;
+  display: block;
 }
 
-.cards{
-  padding-top: 3%;
-  padding-left: 11%;
+#cards-grid section{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
+  grid-gap: 28px;
+  padding: 10px;
+}
+
+#cards-grid section > div:nth-child(n + 4){
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+  align-items: center;
+  border-top: 0;
+  /* overflow: scroll; */
 }
 
-.card-item footer {
-  font-size: 13px;
-  color: #fff;
+#cards-grid section > div:nth-child(4){
+  background: red;
+  grid-column: 1;
+  grid-row: 2/5;
+  display: block;
 }
 
-
-@media (max-width: 500px) {
-  .cards{
-    padding-left: 40%;
-    padding-top: 10%;
+@media(max-width: 600px){
+  #cards-grid section{
+  grid-template-columns: repeat(2, 1fr);
+}
+  #cards-grid section > div:nth-child(4) {
+    grid-column: auto;
+    grid-row: auto;
   }
 }
 
