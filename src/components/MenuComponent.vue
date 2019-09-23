@@ -8,7 +8,7 @@
       <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{name: 'home'}">Home</router-link>
       <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{name: 'skills'}">Skill</router-link>
       <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{name: 'project'}">Projects</router-link>
-      <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{name: 'contact'}">Contacts</router-link>
+      <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{name: 'hobbies'}">hobbies</router-link>
       <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{name: 'about'}">About</router-link>
     </ul>
   </nav>

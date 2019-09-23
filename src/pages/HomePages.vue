@@ -1,32 +1,3 @@
-<template>
-<div id="main">
-  <div class="main-avatar">
-    <img :src="avatar" :alt="avatar" />
-    <h1>{{ this.message }}</h1>
-    <p>{{ this.name }}</p>
-  </div>
-  <NetworkComponent></NetworkComponent>
-</div>
-</template>
-
-<script>
-import avatar from "../assets/lucas-castro.jpg";
-import NetworkComponent from "../components/NetworkComponent.vue";
-
-export default {
-  data() {
-    return {
-      avatar,
-      message: 'Hello World!',
-      name: 'Lucas Castro | Junior Software Developer'
-    };
-  },
-  components: {
-    NetworkComponent
-  }
-};
-</script>
-
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Bungee+Shade");
 
@@ -73,3 +44,43 @@ export default {
   }
 }
 </style>
+
+<template>
+<div id="main">
+  <div class="main-avatar">
+    <img :src="avatar" :alt="avatar" />
+    <h1>{{ this.message }}</h1>
+    <p>{{ this.name }}</p>
+  </div>
+  <NetworkComponent></NetworkComponent>
+</div>
+</template>
+
+<script>
+import NetworkComponent from "../components/NetworkComponent.vue";
+
+export default {
+  created() {
+    this.loadAvatar();
+  },
+  data() {
+    return {
+      message: 'Hello World!',
+      name: 'Lucas Castro | Junior Software Developer'
+    };
+  },
+  methods: {
+    loadAvatar() {
+      this.$store.dispatch('loadAvatar');
+    }
+  },
+  computed: {
+    avatar() {
+      return this.$store.state.Avatar.items.avatar_url;
+    }
+  },
+  components: {
+    NetworkComponent
+  }
+};
+</script>
