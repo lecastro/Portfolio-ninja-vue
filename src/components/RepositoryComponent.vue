@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import github from '../assets/github.gif'
+import github from '../assets/git.gif'
 
 export default {
   created() {
@@ -35,10 +35,6 @@ export default {
 </script>
 
 <style scoped>
-a {
-  text-decoration: none;
-}
-
 #cards-grid section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -46,6 +42,11 @@ a {
   margin: 0 auto;
   grid-gap: 28px;
   padding: 10px;
+  text-align: center;
+}
+
+#cards-grid section .card-item img {
+  border-radius: 50%;
 }
 
 #cards-grid section>div:nth-child(n + 4) {
@@ -54,7 +55,16 @@ a {
   grid-gap: 10px;
   align-items: center;
   border-top: 0;
-  /* overflow: scroll; */
+}
+
+#cards-grid section a {
+  text-decoration: none;
+  font-size: 1.05em;
+  color: #fff;
+}
+
+#cards-grid section a:hover {
+  color: #000;
 }
 
 @media(max-width: 600px) {

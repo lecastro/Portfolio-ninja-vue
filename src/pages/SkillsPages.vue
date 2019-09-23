@@ -1,14 +1,14 @@
 <template>
-  <div>
-    <skills></skills>
-  </div>
+<div>
+  <skills></skills>
+</div>
 </template>
 
 <script>
 import skillsComponent from '../components/SkillsComponent';
 export default {
-  components:{
-  skills:skillsComponent
+  components: {
+    skills: skillsComponent
   }
 }
 </script>

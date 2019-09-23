@@ -1,12 +1,12 @@
 <template>
-  <div id="main">
-    <div class="main-avatar">
-        <img :src="avatar" :alt="avatar" />
-        <h1>{{ this.message }}</h1>
-        <p>{{ this.name }}</p>
-    </div>
-    <NetworkComponent></NetworkComponent>
+<div id="main">
+  <div class="main-avatar">
+    <img :src="avatar" :alt="avatar" />
+    <h1>{{ this.message }}</h1>
+    <p>{{ this.name }}</p>
   </div>
+  <NetworkComponent></NetworkComponent>
+</div>
 </template>
 
 <script>
@@ -60,6 +60,7 @@ export default {
   font-size: 18px;
   color: #fff;
 }
+
 @media screen and (max-width: 850px) {
   #main .main-avatar h1 {
     font-size: 2em;
@@ -72,4 +73,3 @@ export default {
   }
 }
 </style>
-
