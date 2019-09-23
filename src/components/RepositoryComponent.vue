@@ -1,16 +1,17 @@
 <template>
 <div id="cards-grid">
   <section>
-      <div class="card-item" v-for="(item, index) in repository" :key="index">
-        <img class="article-img" :src='github' :alt='github' />
-        <strong>{{ item.name }}</strong>
-      </div>
+    <div class="card-item" v-for="(item, index) in repository" :key="index">
+      <img :src='github' :alt='github' />
+      <a :href="item.svn_url" target="_blank">{{ item.name }}</a>
+    </div>
   </section>
 </div>
 </template>
 
 <script>
 import github from '../assets/github.gif'
+
 export default {
   created() {
     this.loadRepository();
@@ -21,12 +22,12 @@ export default {
     }
   },
   methods: {
-    loadRepository(){
+    loadRepository() {
       this.$store.dispatch("loadRepository");
     }
   },
   computed: {
-    repository(){
+    repository() {
       return this.$store.state.Repository.items;
     }
   },
@@ -34,13 +35,11 @@ export default {
 </script>
 
 <style scoped>
-
-img {
-  max-width: 100%;
-  display: block;
+a {
+  text-decoration: none;
 }
 
-#cards-grid section{
+#cards-grid section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   max-width: 800px;
@@ -49,7 +48,7 @@ img {
   padding: 10px;
 }
 
-#cards-grid section > div:nth-child(n + 4){
+#cards-grid section>div:nth-child(n + 4) {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -58,21 +57,10 @@ img {
   /* overflow: scroll; */
 }
 
-#cards-grid section > div:nth-child(4){
-  background: red;
-  grid-column: 1;
-  grid-row: 2/5;
-  display: block;
-}
-
-@media(max-width: 600px){
-  #cards-grid section{
-  grid-template-columns: repeat(2, 1fr);
-}
-  #cards-grid section > div:nth-child(4) {
-    grid-column: auto;
-    grid-row: auto;
+@media(max-width: 600px) {
+  #cards-grid section {
+    width: 280px;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-
 </style>
