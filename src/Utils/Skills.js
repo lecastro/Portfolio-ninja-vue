@@ -1,5 +1,4 @@
-const skills = [
-  {
+const skills = [{
     name: 'Laravel',
     level: '75%',
     className: 'laravel'

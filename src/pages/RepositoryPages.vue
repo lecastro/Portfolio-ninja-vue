@@ -6,8 +6,8 @@
 import RepositoryComponent from '../components/RepositoryComponent.vue';
 
 export default {
-  components: {
-    project: RepositoryComponent,
-  }
+    components: {
+        project: RepositoryComponent,
+    }
 }
 </script>

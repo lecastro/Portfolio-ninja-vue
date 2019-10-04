@@ -1,16 +1,16 @@
 <template>
-  <div id="app">
+<div id="app">
     <MenuCompoment></MenuCompoment>
-  </div>
+</div>
 </template>
 
 <script>
 import MenuCompoment from "./components/MenuComponent";
 
 export default {
-  name: "App",
-  components: {
-    MenuCompoment
-  }
+    name: "App",
+    components: {
+        MenuCompoment
+    }
 };
 </script>
