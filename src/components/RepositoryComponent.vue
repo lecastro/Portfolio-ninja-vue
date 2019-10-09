@@ -1,7 +1,8 @@
 <template>
+
 <div id="cards-grid">
     <section>
-        <div class="card-item" v-for="(item, index) in repository" :key="index">
+        <div class="card-item" v-for="(item, index) in items.repository" :key="index">
             <img :src='github' :alt='github' />
             <a :href="item.svn_url" target="_blank">{{ item.name }}</a>
         </div>
@@ -11,25 +12,22 @@
 
 <script>
 import github from '../assets/git.gif'
+import { mapState, mapActions } from 'vuex';
 
 export default {
-    created() {
-        this.loadRepository();
-    },
     data() {
         return {
             github
         }
     },
+    mounted() {
+        this.loadRepository();
+    },
     methods: {
-        loadRepository() {
-            this.$store.dispatch("loadRepository");
-        }
+        ...mapActions('github', ['loadRepository'])
     },
     computed: {
-        repository() {
-            return this.$store.state.Repository.items;
-        }
+        ...mapState('github', ['items']),
     },
 }
 </script>

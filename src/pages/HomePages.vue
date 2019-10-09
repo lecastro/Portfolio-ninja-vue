@@ -1,3 +1,42 @@
+<template>
+
+<div id="main">
+    <div class="main-avatar">
+        <img v-if="items.avatar" :src="items.avatar.avatar_url" :alt="items.avatar.name" />
+        <h1>{{ this.message }}</h1>
+        <p>{{ this.name }}</p>
+    </div>
+    <NetworkComponent></NetworkComponent>
+</div>
+
+</template>
+
+<script>
+import NetworkComponent from "../components/NetworkComponent.vue";
+import { mapState, mapActions } from 'vuex';
+
+export default {
+    created() {
+        this.loadAvatar();
+    },
+    data() {
+        return {
+            message: 'Hello World!',
+            name: 'Lucas Castro | Junior Software Developer'
+        };
+    },
+    methods: {
+        ...mapActions('github', ['loadAvatar'])
+    },
+    computed: {
+        ...mapState('github', ['items']),
+    },
+    components: {
+        NetworkComponent
+    }
+};
+</script>
+
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Bungee+Shade");
 
@@ -44,43 +83,3 @@
     }
 }
 </style>
-
-<template>
-<div id="main">
-    <div class="main-avatar">
-        <img :src="avatar" :alt="avatar" />
-        <h1>{{ this.message }}</h1>
-        <p>{{ this.name }}</p>
-    </div>
-    <NetworkComponent></NetworkComponent>
-</div>
-</template>
-
-<script>
-import NetworkComponent from "../components/NetworkComponent.vue";
-
-export default {
-    created() {
-        this.loadAvatar();
-    },
-    data() {
-        return {
-            message: 'Hello World!',
-            name: 'Lucas Castro | Junior Software Developer'
-        };
-    },
-    methods: {
-        loadAvatar() {
-            this.$store.dispatch('loadAvatar');
-        }
-    },
-    computed: {
-        avatar() {
-            return this.$store.state.Avatar.items.avatar_url;
-        }
-    },
-    components: {
-        NetworkComponent
-    }
-};
-</script>
