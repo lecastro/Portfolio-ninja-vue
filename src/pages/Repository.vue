@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import RepositoryComponent from '../components/RepositoryComponent.vue';
+import RepositoryComponent from '../components/Repository.vue';
 
 export default {
     components: {

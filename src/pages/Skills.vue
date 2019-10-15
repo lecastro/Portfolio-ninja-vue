@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import skillsComponent from '../components/SkillsComponent';
+import skillsComponent from '../components/Skills';
 export default {
     components: {
         skills: skillsComponent

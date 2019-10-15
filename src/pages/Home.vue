@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import NetworkComponent from "../components/NetworkComponent.vue";
+import NetworkComponent from "../components/Network.vue";
 import { mapState, mapActions } from 'vuex';
 
 export default {
