@@ -1,5 +1,5 @@
 <template>
-<project></project>
+<project />
 </template>
 
 <script>

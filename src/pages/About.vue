@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AboutComponent></AboutComponent>
+    <AboutComponent />
   </div>
 </template>
 

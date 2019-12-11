@@ -1,6 +1,6 @@
 <template>
 <div>
-    <skills></skills>
+    <skills />
 </div>
 </template>
 

@@ -6,7 +6,7 @@
         <h1>{{ this.message }}</h1>
         <p>{{ this.name }}</p>
     </div>
-    <NetworkComponent></NetworkComponent>
+    <NetworkComponent />
 </div>
 
 </template>
