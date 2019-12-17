@@ -15,6 +15,7 @@ import github from '../assets/git.gif'
 import { mapState, mapActions } from 'vuex';
 
 export default {
+    name: 'Repository',
     data() {
         return {
             github

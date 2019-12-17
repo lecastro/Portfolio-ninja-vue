@@ -2,17 +2,14 @@
 <div id="main">
     <div class="main-avatar">
         <img v-if="items.avatar" :src="items.avatar.avatar_url" :alt="items.avatar.name" />
-        <HelloWorldComponent :isActive="isActive" />
+        <HelloWorld :isActive="isActive" />
         <p>{{ this.name }}</p>
     </div>
-
-    <NetworkComponent />
+    <Network />
 </div>
 </template>
 
 <script>
-import NetworkComponent from "../components/Network";
-import HelloWorldComponent from "../components/AnimatedLetters";
 
 import { mapState, mapActions } from 'vuex';
 
@@ -32,10 +29,6 @@ export default {
         ...mapState('github', ['items']),
         ...mapState('index', ['isActive']),
     },
-    components: {
-        NetworkComponent,
-        HelloWorldComponent,
-    }
 };
 </script>
 

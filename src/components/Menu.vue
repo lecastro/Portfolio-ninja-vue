@@ -18,6 +18,7 @@
 <script>
 import { mapMutations } from 'vuex';
 export default {
+    name: 'Menu',
     data() {
         return {
             isActive: false

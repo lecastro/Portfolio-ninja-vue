@@ -16,6 +16,8 @@ import instagram from '../assets/social/instagram.png';
 import linkedin from '../assets/social/linkedin.png';
 
 export default {
+  name: 'Network',
+
   data() {
     return {
       images: {

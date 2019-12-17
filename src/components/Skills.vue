@@ -39,6 +39,8 @@ const customStyles = {
 };
 
 export default {
+  name: 'Skills',
+
   data() {
     return {
       customStyles,

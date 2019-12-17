@@ -18,6 +18,7 @@
 
 <script>
 export default {
+    name: 'HelloWorld',
     props: {
         isActive: {
             type: Boolean,
