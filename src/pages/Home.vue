@@ -1,18 +1,19 @@
 <template>
-
 <div id="main">
     <div class="main-avatar">
         <img v-if="items.avatar" :src="items.avatar.avatar_url" :alt="items.avatar.name" />
-        <h1>{{ this.message }}</h1>
+        <HelloWorldComponent :isActive="isActive" />
         <p>{{ this.name }}</p>
     </div>
+
     <NetworkComponent />
 </div>
-
 </template>
 
 <script>
-import NetworkComponent from "../components/Network.vue";
+import NetworkComponent from "../components/Network";
+import HelloWorldComponent from "../components/AnimatedLetters";
+
 import { mapState, mapActions } from 'vuex';
 
 export default {
@@ -21,8 +22,7 @@ export default {
     },
     data() {
         return {
-            message: 'Hello World!',
-            name: 'Lucas Castro | Junior Software Developer'
+            name: 'Lucas Castro | Software Engineer | AllEasy'
         };
     },
     methods: {
@@ -30,9 +30,11 @@ export default {
     },
     computed: {
         ...mapState('github', ['items']),
+        ...mapState('index', ['isActive']),
     },
     components: {
-        NetworkComponent
+        NetworkComponent,
+        HelloWorldComponent,
     }
 };
 </script>
@@ -57,13 +59,6 @@ export default {
     border-radius: 50%;
     border: 5px solid #fff;
     margin: 30px;
-}
-
-#main .main-avatar h1 {
-    color: #000;
-    font-size: 35px;
-    font-family: 'Bungee Shade';
-    text-align: center;
 }
 
 #main .main-avatar p {

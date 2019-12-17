@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 export default {
     data() {
         return {
@@ -23,14 +24,14 @@ export default {
         };
     },
     methods: {
+        ...mapMutations('index', ['STOP_HELLO_WORLD']),
+
         btnOpen() {
-            this.isActive === false ?
-                (this.isActive = true) :
-                (this.isActive = false);
+            this.isActive === false ? (this.isActive = true, this.STOP_HELLO_WORLD(this.isActive)) : (this.isActive = false, this.STOP_HELLO_WORLD(this.isActive));
         },
         closeMenu() {
             this.isActive = false
-        }
+        },
     }
 };
 </script>
