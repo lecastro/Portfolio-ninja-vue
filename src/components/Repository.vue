@@ -1,5 +1,4 @@
 <template>
-
 <div id="cards-grid">
     <section>
         <div class="card-item" v-for="(item, index) in items.repository" :key="index">
