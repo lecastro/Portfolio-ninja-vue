@@ -12,6 +12,7 @@
             </div>
         </div>
     </div>
+
     <div class="card">
         <div class="imgBx" data-text='text'>
             <img :src="img.data" />
@@ -24,6 +25,7 @@
             </div>
         </div>
     </div>
+
     <div class="card">
         <div class="imgBx" data-text='text'>
             <img :src="img.data" />
@@ -36,6 +38,7 @@
             </div>
         </div>
     </div>
+
     <div class="card">
         <div class="imgBx" data-text='text'>
             <img :src="img.data" />
