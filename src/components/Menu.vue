@@ -60,6 +60,7 @@ export default {
     width: 600px;
     transform: translateX(-100%);
     transition: transform 0.3s 0.3s;
+    z-index: 9999;
 }
 
 .nav-menu::before {
@@ -72,7 +73,6 @@ export default {
     transform: translate(-50%, -50%) rotate(40deg);
     width: 100%;
     z-index: 0;
-
 }
 
 .nav-menu--open {
@@ -84,6 +84,7 @@ export default {
 }
 
 .nav-menu--open .nav-menu__bars::before,
+
 .nav-menu--open .nav-menu__bars::after {
     top: 0;
 }
