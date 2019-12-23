@@ -5,10 +5,10 @@
             <span class="nav-menu__bars"></span>
         </div>
         <ul class="menu-list">
-            <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{name: 'home'}">Home</router-link>
-            <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{name: 'skills'}">Skill</router-link>
-            <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{name: 'project'}">Projects</router-link>
-            <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{name: 'about'}">About</router-link>
+            <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{ name: 'home' }">Home</router-link>
+            <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{ name: 'skills' }">Skill</router-link>
+            <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{ name: 'project' }">Projects</router-link>
+            <router-link class="menu-list__item" v-on:click.native="closeMenu" :to="{ name: 'about' }">About</router-link>
         </ul>
     </nav>
     <router-view></router-view>

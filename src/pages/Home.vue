@@ -2,7 +2,7 @@
 <div id="main">
     <div class="main-avatar">
         <img v-if="items.avatar" :src="items.avatar.avatar_url" :alt="items.avatar.name" />
-        <HelloWorld :isActive="isActive" />
+        <HelloWorld  />
         <p>{{ this.name }}</p>
     </div>
     <Network />
