@@ -195,7 +195,7 @@ export default {
     left: -75px;
     top: calc(50% - 75px);
     transition: 0.5s ease-in-out;
-    background: #ff0057;
+    background: #4e567e;
 }
 
 #container .card .imgBx:before {
