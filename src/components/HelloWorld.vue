@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    name: 'HelloWorld',
+    name: 'Hello World',
 }
 </script>
 

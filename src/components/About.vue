@@ -7,11 +7,15 @@
         </div>
         <div class="content">
             <div>
-                <h3>Lucas</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    <span :style="{ display: btn1.display }">when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>
-                <button v-if="this.btn1.button" @click.prevent="handleReadMore('btn1')">Read More</button>
-                <button v-else @click.prevent="handleClose('btn1')">Read More</button>
+                <!-- <h3>Lucas</h3> -->
+                <p>Sou formado em Análise de Sistemas e atualmente trabalho como consultor na <a href="http://www.unisa.br/">unisa</a>, como engenheiro de software...<span :style="{ display: btn1.display }">
+                        <li>Experiência com PHP utilizando Laravel</li>
+                        <li>Conhecimento em HTML, CSS, JavaScript e VueJS</li>
+                        <li>Banco de Dados MySQL e MongoDB</li>
+                        <li>Conhecimento em GIT (controle de versão)</li>
+                    </span></p>
+                <button v-if="this.btn1.button" @click.prevent="handleReadMore('btn1')">Ler Mais</button>
+                <button v-else @click.prevent="handleClose('btn1')">volta</button>
             </div>
         </div>
     </div>
@@ -22,11 +26,18 @@
         </div>
         <div class="content">
             <div>
-                <h3>Jiu Jitsu</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    <span :style="{ display: btn2.display }">when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>
-                <button v-if="this.btn2.button" @click.prevent="handleReadMore('btn2')">Read More</button>
-                <button v-else @click.prevent="handleClose('btn2')">Read More</button>
+                <!-- <h3>Jiu Jitsu</h3> -->
+                <p>Sou apaixonado esportes já pratiquei varias modalidades como futebol, skate, patins e lutas<span :style="{ display: btn2.display }">Meu principal esporte hoje em dia e jiu-jitsu. O jiu-jitsu minha maior paixão Por quê:
+                        <li>Defesa pessoal. O Jiu Jitsu é uma ótima arte marcial e um dos benefícios é o desenvolvimento da defesa pessoal</li>
+                        <li>Diminui o stress e aumenta o bem-estar</li>
+                        <li>Define o corpo</li>
+                        <li>Melhora a capacidade cardiovascular e trabalha a respiração</li>
+                        <li>Melhora os reflexos</li>
+                        <li>Desenvolve o caráter</li>
+                        <li>Perda de peso</li>
+                    </span></p>
+                <button v-if="this.btn2.button" @click.prevent="handleReadMore('btn2')">Ler Mais</button>
+                <button v-else @click.prevent="handleClose('btn2')">Volta</button>
             </div>
         </div>
     </div>
@@ -37,11 +48,11 @@
         </div>
         <div class="content">
             <div>
-                <h3>Games</h3>
+                <!-- <h3>Games</h3> -->
                 <p>Hoje o games tem um papel muito importante na minha vida, um do meus principais passa tempo
                     <span :style="{ display: btn3.display }">o que me atrai para mundo do games é um mercado que está sempre investindo em enovação e tecnologia.</span></p>
-                <button v-if="this.btn3.button" @click.prevent="handleReadMore('btn3')">Read More</button>
-                <button v-else @click.prevent="handleClose('btn3')">Read More</button>
+                <button v-if="this.btn3.button" @click.prevent="handleReadMore('btn3')">Ler Mais</button>
+                <button v-else @click.prevent="handleClose('btn3')">Volta</button>
             </div>
         </div>
     </div>
@@ -52,11 +63,10 @@
         </div>
         <div class="content">
             <div>
-                <h3>Passa tempos</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    <span :style="{ display: btn4.display }">when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>
-                <button v-if="this.btn4.button" @click.prevent="handleReadMore('btn4')">Read More</button>
-                <button v-else @click.prevent="handleClose('btn4')">Read More</button>
+                <!-- <h3>Passa tempos</h3> -->
+                <p>Meus principais passatempos hoje em dia é aprender mais sobre fatos que acontece no mundo políticos e econômicos Brasil<span :style="{ display: btn4.display }">e no Mundo</span></p>
+                <button v-if="this.btn4.button" @click.prevent="handleReadMore('btn4')">Ler Mais</button>
+                <button v-else @click.prevent="handleClose('btn4')">Volta</button>
             </div>
         </div>
     </div>
