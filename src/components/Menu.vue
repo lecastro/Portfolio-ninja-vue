@@ -16,7 +16,9 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
+import {
+    mapMutations
+} from 'vuex';
 export default {
     name: 'Menu',
     data() {
@@ -25,10 +27,10 @@ export default {
         };
     },
     methods: {
-        ...mapMutations('index', ['STOP_HELLO_WORLD']),
+        // ...mapMutations('index', ['STOP_HELLO_WORLD']),
 
         btnOpen() {
-            this.isActive === false ? (this.isActive = true, this.STOP_HELLO_WORLD(this.isActive)) : (this.isActive = false, this.STOP_HELLO_WORLD(this.isActive));
+            this.isActive === false ? (this.isActive = true) : (this.isActive = false);
         },
         closeMenu() {
             this.isActive = false
