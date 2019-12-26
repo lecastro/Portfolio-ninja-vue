@@ -1,17 +1,17 @@
 <template>
 <div id="message">
     <h1>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">H</span>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">e</span>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">l</span>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">l</span>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">o</span>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">W</span>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">o</span>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">r</span>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">l</span>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">d</span>
-        <span class="animationLetters" :class="{'stopLetters':isActive}">!</span>
+        <span class="animationLetters">H</span>
+        <span class="animationLetters">e</span>
+        <span class="animationLetters">l</span>
+        <span class="animationLetters">l</span>
+        <span class="animationLetters">o</span>
+        <span class="animationLetters">W</span>
+        <span class="animationLetters">o</span>
+        <span class="animationLetters">r</span>
+        <span class="animationLetters">l</span>
+        <span class="animationLetters">d</span>
+        <span class="animationLetters">!</span>
     </h1>
 </div>
 </template>
@@ -19,11 +19,6 @@
 <script>
 export default {
     name: 'HelloWorld',
-    props: {
-        isActive: {
-            type: Boolean,
-        }
-    },
 }
 </script>
 
