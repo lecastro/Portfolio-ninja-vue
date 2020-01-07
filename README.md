@@ -7,12 +7,6 @@ https://github.com/lecastro/site-pessoal
 
 ![site](https://github.com/lecastro/site-pessoal/blob/master/src/assets/site.png)
 
-
-## *Ferramentas...*
-* node
-* npm ou yarn
-* git
-
 ## *Instalação*
 
 Primeiro passo, clonar o projeto:
