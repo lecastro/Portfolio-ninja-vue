@@ -5,7 +5,7 @@ Criei este projeto em vuejs para testa meus conhecimento em javascript e css e a
 
 https://github.com/lecastro/site-pessoal
 
-![Alt ou título da imagem](URL da imagem)
+![site](https://github.com/lecastro/site-pessoal/blob/master/src/assets/site.png)
 
 
 ## *Ferramentas...*
